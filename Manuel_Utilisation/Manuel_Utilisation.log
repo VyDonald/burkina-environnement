@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.31)  17 AUG 2026 19:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.31)  17 AUG 2026 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,7 +770,7 @@ l.162 \chapter
 
 ]
 Chapitre 1.
-<images/01_accueil.png, id=260, 1284.8pt x 1202.4925pt>
+<images/01_accueil.png, id=250, 1284.8pt x 1202.4925pt>
 File: images/01_accueil.png Graphic file (type png)
 <use images/01_accueil.png>
 Package pdftex.def Info: images/01_accueil.png  used on input line 185.
@@ -832,144 +832,101 @@ Package pdftex.def Info: images/01_accueil.png  used on input line 412.
 [8
 
 ]
-<images/02_recherche.png, id=355, 1284.8pt x 1202.4925pt>
+<images/02_recherche.png, id=345, 1284.8pt x 1202.4925pt>
 File: images/02_recherche.png Graphic file (type png)
 <use images/02_recherche.png>
 Package pdftex.def Info: images/02_recherche.png  used on input line 428.
 (pdftex.def)             Requested size: 455.24411pt x 426.07132pt.
  [9 <./images/02_recherche.png (PNG copy)>]
-<images/03_faune.png, id=363, 1284.8pt x 2167.09625pt>
-File: images/03_faune.png Graphic file (type png)
-<use images/03_faune.png>
-Package pdftex.def Info: images/03_faune.png  used on input line 447.
-(pdftex.def)             Requested size: 455.24411pt x 767.85307pt.
-
-
-LaTeX Warning: Float too large for page by 99.06999pt on input line 450.
-
-<images/05_flore.png, id=364, 1284.8pt x 2283.53125pt>
-File: images/05_flore.png Graphic file (type png)
-<use images/05_flore.png>
-Package pdftex.def Info: images/05_flore.png  used on input line 454.
-(pdftex.def)             Requested size: 455.24411pt x 809.10873pt.
-
-LaTeX Warning: Float too large for page by 140.32565pt on input line 457.
-
-<images/04_fiche_faune.png, id=365, 1284.8pt x 824.07875pt>
+<images/04_fiche_faune.png, id=353, 1284.8pt x 824.07875pt>
 File: images/04_fiche_faune.png Graphic file (type png)
 <use images/04_fiche_faune.png>
-Package pdftex.def Info: images/04_fiche_faune.png  used on input line 469.
+Package pdftex.def Info: images/04_fiche_faune.png  used on input line 455.
 (pdftex.def)             Requested size: 455.24411pt x 291.99043pt.
-<images/06_fiche_flore.png, id=366, 1284.8pt x 803.0pt>
+<images/06_fiche_flore.png, id=354, 1284.8pt x 1084.05pt>
 File: images/06_fiche_flore.png Graphic file (type png)
 <use images/06_fiche_flore.png>
-Package pdftex.def Info: images/06_fiche_flore.png  used on input line 481.
-(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
+Package pdftex.def Info: images/06_fiche_flore.png  used on input line 467.
+(pdftex.def)             Requested size: 455.24411pt x 384.10435pt.
 
-Overfull \hbox (7.27669pt too wide) in paragraph at lines 489--493
+Overfull \hbox (7.27669pt too wide) in paragraph at lines 475--479
 \T1/lmr/m/n/12 peut re-cher-cher et fil-trer par type (Fleuve, Ri-vière, Ma-ri-
 got). La fiche (\T1/lmtt/m/n/12 /cours-deau/<nom>\T1/lmr/m/n/12 )
  []
 
-<images/07_cours_deau.png, id=367, 1284.8pt x 2145.01375pt>
-File: images/07_cours_deau.png Graphic file (type png)
-<use images/07_cours_deau.png>
-Package pdftex.def Info: images/07_cours_deau.png  used on input line 496.
-(pdftex.def)             Requested size: 455.24411pt x 760.02873pt.
-
-LaTeX Warning: Float too large for page by 91.24565pt on input line 499.
-
-<images/08_fiche_cours_deau.png, id=368, 1284.8pt x 1109.14375pt>
+<images/08_fiche_cours_deau.png, id=355, 1284.8pt x 1109.14375pt>
 File: images/08_fiche_cours_deau.png Graphic file (type png)
 <use images/08_fiche_cours_deau.png>
-Package pdftex.def Info: images/08_fiche_cours_deau.png  used on input line 503
+Package pdftex.def Info: images/08_fiche_cours_deau.png  used on input line 482
 .
 (pdftex.def)             Requested size: 455.24411pt x 392.99567pt.
-<images/09_habitats.png, id=369, 1284.8pt x 3832.3175pt>
-File: images/09_habitats.png Graphic file (type png)
-<use images/09_habitats.png>
-Package pdftex.def Info: images/09_habitats.png  used on input line 516.
-(pdftex.def)             Requested size: 455.24411pt x 1357.88007pt.
-
-LaTeX Warning: Float too large for page by 689.09698pt on input line 519.
-
-<images/10_fiche_habitat.png, id=370, 1284.8pt x 1653.17625pt>
+[10 <./images/04_fiche_faune.png (PNG copy)>] [11 <./images/06_fiche_flore.png 
+(PNG copy)>] [12 <./images/08_fiche_cours_deau.png (PNG copy)>]
+<images/10_fiche_habitat.png, id=369, 1284.8pt x 1653.17625pt>
 File: images/10_fiche_habitat.png Graphic file (type png)
 <use images/10_fiche_habitat.png>
-Package pdftex.def Info: images/10_fiche_habitat.png  used on input line 523.
+Package pdftex.def Info: images/10_fiche_habitat.png  used on input line 495.
 (pdftex.def)             Requested size: 455.24411pt x 585.75916pt.
-<images/11_carte.png, id=371, 1284.8pt x 1107.13625pt>
+<images/11_carte.png, id=370, 1284.8pt x 1107.13625pt>
 File: images/11_carte.png Graphic file (type png)
 <use images/11_carte.png>
-Package pdftex.def Info: images/11_carte.png  used on input line 537.
+Package pdftex.def Info: images/11_carte.png  used on input line 509.
 (pdftex.def)             Requested size: 455.24411pt x 392.28436pt.
-<images/12_menacees.png, id=372, 1284.8pt x 1908.12875pt>
-File: images/12_menacees.png Graphic file (type png)
-<use images/12_menacees.png>
-Package pdftex.def Info: images/12_menacees.png  used on input line 549.
-(pdftex.def)             Requested size: 455.24411pt x 676.09482pt.
-
-LaTeX Warning: Float too large for page by 7.31174pt on input line 552.
-
-[10] [11 <./images/03_faune.png (PNG copy)>] [12 <./images/05_flore.png (PNG co
-py)>] [13 <./images/04_fiche_faune.png (PNG copy)> <./images/06_fiche_flore.png
- (PNG copy)>] [14 <./images/07_cours_deau.png (PNG copy)>] [15 <./images/08_fic
-he_cours_deau.png (PNG copy)>] [16 <./images/09_habitats.png (PNG copy)>]
-[17 <./images/10_fiche_habitat.png (PNG copy)>] [18 <./images/11_carte.png (PNG
- copy)>] [19 <./images/12_menacees.png (PNG copy)>]
+ [13] [14 <./images/10_fiche_habitat.png (PNG copy)>] [15 <./images/11_carte.pn
+g (PNG copy)>]
 Chapitre 6.
 
-Underfull \hbox (badness 3601) in paragraph at lines 564--564
+Underfull \hbox (badness 3601) in paragraph at lines 529--529
 []|\T1/lmr/m/n/12 Python ab-sent ou hors du
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 564--565
+Underfull \hbox (badness 3482) in paragraph at lines 529--530
 \T1/lmr/m/n/12 chant \T1/lmr/bx/n/12 Add Py-thon to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
 \T1/lmr/m/n/12 ri-fier [][]$\T1/lmtt/m/n/12 http : / / localhost :
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 569--569
+Underfull \hbox (badness 1424) in paragraph at lines 534--534
 []|\T1/lmr/m/n/12 Le fi-chier \T1/lmtt/m/n/12 .owx \T1/lmr/m/n/12 n'a pas été
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 []|\T1/lmr/m/n/12 Clic droit sur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
 \T1/lmtt/m/n/12 fuseki-server \T1/lmr/m/n/12 puis ^^S
  []
 
-[20
+[16
 
 ]
 Chapitre 7.
-[21
+[17
 
 ]
 Annexe A.
 
-Overfull \hbox (14.05612pt too wide) in paragraph at lines 638--638
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 609--609
 []\T1/lmtt/m/n/12 |   |-- commun.py          # statistiques, recherche globale,
  filtre Burkina[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
 []|[][]$\T1/lmtt/m/n/12 https : / / burkina-[]environnement . onrender .
  []
 
-[22
+[18
 
-] [23] (Manuel_Utilisation.aux)
+] [19] (Manuel_Utilisation.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -982,10 +939,10 @@ Package rerunfilecheck Info: File `Manuel_Utilisation.out' has not changed.
 (rerunfilecheck)             Checksum: CE80EA00A7A356F5F841863F4A7CDE25;6590.
  ) 
 Here is how much of TeX's memory you used:
- 16690 strings out of 467871
- 270688 string characters out of 5415956
+ 16636 strings out of 467871
+ 269391 string characters out of 5415956
  771247 words of memory out of 5000000
- 45196 multiletter control sequences out of 15000+600000
+ 45151 multiletter control sequences out of 15000+600000
  704312 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,366b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1001,9 +958,9 @@ MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/dkomtoubre/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/dkomtoubre/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/dkomtoubre/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Manuel_Utilisation.pdf (27 pages, 5620608 bytes).
+Output written on Manuel_Utilisation.pdf (23 pages, 2477787 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

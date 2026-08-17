@@ -26,13 +26,13 @@
 \contentsline {section}{\numberline {5.3}Domaines « Faune » et « Flore »}{9}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Les fiches}{10}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Cours d'eau}{10}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Habitats (localités)}{10}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Carte spatiale}{10}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Espèces menacées}{10}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Résolution des problèmes}{20}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Accès en ligne}{20}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Conclusion}{21}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Arborescence du projet}{22}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Configuration du endpoint SPARQL}{22}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Requêtes de vérification}{22}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Récapitulatif des adresses}{23}{section.A.3}%
+\contentsline {section}{\numberline {5.6}Habitats (localités)}{13}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Carte spatiale}{13}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Espèces menacées}{13}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Résolution des problèmes}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Accès en ligne}{16}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Conclusion}{17}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Arborescence du projet}{18}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Configuration du endpoint SPARQL}{18}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Requêtes de vérification}{18}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Récapitulatif des adresses}{19}{section.A.3}%
