@@ -8,7 +8,7 @@ echo "[1/4] Demarrage de Apache Jena Fuseki..."
 FUSEKI_BASE="/tmp/fuseki-run"
 mkdir -p "$FUSEKI_BASE/configuration"
 export FUSEKI_BASE
-/opt/fuseki/fuseki-server --port=3030 &
+/opt/fuseki/fuseki-server --port=3030 --host=127.0.0.1 &
 
 # Attendre que Fuseki soit pret
 echo "      Attente de Fuseki..."
