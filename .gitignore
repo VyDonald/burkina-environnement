@@ -16,3 +16,4 @@ build/
 Thumbs.db
 opt/fuseki/run/
 ontologie_envi_final*
+.github/
