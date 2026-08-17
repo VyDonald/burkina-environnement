@@ -49400,7 +49400,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nomLocal"/>
-        <Datatype abbreviatedIRI="rdf:langString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nomLocalite"/>

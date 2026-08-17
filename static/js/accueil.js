@@ -1,6 +1,32 @@
 "use strict";
 
 (() => {
+  /* --- Compteurs animés --- */
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".stat-nb[data-val]").forEach((el) => {
+    const cible = parseInt(el.dataset.val, 10) || 0;
+    if (reduced || !cible) { el.textContent = cible; return; }
+    let demarre = false;
+    const animer = () => {
+      if (demarre) return;
+      demarre = true;
+      const duree = 1200;
+      const depart = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - depart) / duree, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(cible * ease);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if ("IntersectionObserver" in window) {
+      const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { animer(); obs.disconnect(); } }, { threshold: .3 });
+      obs.observe(el);
+    } else { animer(); }
+  });
+
+  /* --- Recherche globale --- */
   const champ = document.getElementById("q-globale");
   const boite = document.getElementById("resultats-globaux");
 

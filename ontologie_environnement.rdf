@@ -1248,7 +1248,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#nomLocal">
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#EspeceVegetale"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="fr">Nom(s) en langue nationale avec balise de langue (ex. &quot;taanga&quot;@mos).</rdfs:comment>
         <rdfs:label xml:lang="fr">nomLocal</rdfs:label>
     </owl:DatatypeProperty>

@@ -3,7 +3,7 @@
 
 {% block contenu %}
 <section class="bandeau">
-  <img src="{{ url_for('static', filename='images/Flag_of_Burkina_Faso_drapeau.gif') }}" alt="" class="bandeau-drapeau" aria-hidden="true">
+  <div class="faso-tissage" aria-hidden="true"></div>
   <h1>L'environnement du <span class="accent">Burkina Faso</span></h1>
   <p>Une plateforme sémantique pour explorer la faune, la flore et le réseau hydrographique du Burkina Faso.
      Les données proviennent entièrement de l'ontologie « burkina-environnement » interrogeable en SPARQL/GeoSPARQL.</p>
@@ -22,12 +22,12 @@
 </section>
 
 <section class="stats">
-  <div class="stat"><span class="stat-nb">{{ stats.especesAnimales }}</span><span class="stat-lib">Espèces animales</span></div>
-  <div class="stat"><span class="stat-nb">{{ stats.especesVegetales }}</span><span class="stat-lib">Espèces végétales</span></div>
-  <div class="stat"><span class="stat-nb">{{ stats.coursEau }}</span><span class="stat-lib">Cours d'eau</span></div>
-  <div class="stat danger"><span class="stat-nb">{{ stats.menacees }}</span><span class="stat-lib">Espèces menacées (CR/EN)</span></div>
-  <div class="stat"><span class="stat-nb">{{ stats.localites }}</span><span class="stat-lib">Localités</span></div>
-  <div class="stat"><span class="stat-nb">{{ stats.regions + stats.provinces + stats.communes }}</span><span class="stat-lib">Entités administratives</span></div>
+  <div class="stat"><span class="stat-nb" data-val="{{ stats.especesAnimales }}">0</span><span class="stat-lib">Espèces animales</span></div>
+  <div class="stat"><span class="stat-nb" data-val="{{ stats.especesVegetales }}">0</span><span class="stat-lib">Espèces végétales</span></div>
+  <div class="stat"><span class="stat-nb" data-val="{{ stats.coursEau }}">0</span><span class="stat-lib">Cours d'eau</span></div>
+  <div class="stat danger"><span class="stat-nb" data-val="{{ stats.menacees }}">0</span><span class="stat-lib">Espèces menacées (CR/EN)</span></div>
+  <div class="stat"><span class="stat-nb" data-val="{{ stats.localites }}">0</span><span class="stat-lib">Localités</span></div>
+  <div class="stat"><span class="stat-nb" data-val="{{ stats.regions + stats.provinces + stats.communes }}">0</span><span class="stat-lib">Entités administratives</span></div>
 </section>
 
 <h2 class="titre-sec">Explorer par domaine</h2>
