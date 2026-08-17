@@ -28,8 +28,9 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 
-\definecolor{bleu}{RGB}{38,84,124}   % #26547c
-\definecolor{or}{RGB}{212,163,55}    % #d4a337
+\definecolor{bleu}{RGB}{35,44,61}     % #232C3D  indigo (titres, en-têtes)
+\definecolor{or}{RGB}{198,138,61}    % #C68A3D  ocre banco (accents, étoiles)
+\definecolor{laterite}{RGB}{168,70,47} % #A8462F latérite (liens externes)
 \definecolor{grisfond}{RGB}{247,247,247}
 
 \graphicspath{{images/}}
@@ -37,7 +38,7 @@
 \hypersetup{
 colorlinks=true,
 linkcolor=bleu,
-urlcolor=bleu,
+urlcolor=laterite,
 citecolor=bleu,
 pdftitle={Manuel d'utilisation - Application Environnement du Burkina Faso},
 pdfauthor={KOUMTOUBRE Tuwendé Davy Donald, KANIHE Bougapiou Anderson},
@@ -572,6 +573,26 @@ danger (EN) par l'UICN, avec le statut affiché en badge coloré.}
 \end{tabular}
 \end{table}
 
+\section{Accès en ligne}
+
+L'application est également déployée sur le cloud, permettant d'y accéder directement depuis un
+navigateur sans aucune installation locale. Deux plateformes d'hébergement ont été retenues :
+
+\begin{itemize}
+\item \textbf{Fly.io} (recommandé) --- hébergement stable, sans mise en veille, HTTPS automatique.
+      L'application est accessible à l'adresse suivante :
+
+      \url{https://burkina-environnement.fly.dev}
+
+\item \textbf{Render} --- hébergement complémentaire, avec mise en veille au bout d'une
+      inactivité. L'application est accessible à l'adresse suivante :
+
+      \url{https://burkina-environnement.onrender.com}
+\end{itemize}
+
+\noindent Ces deux instances sont synchronisées avec le dépôt Git du projet : chaque mise à jour
+pushée sur la branche \texttt{main} est automatiquement reconstruite et redéployée.
+
 % ======================= CHAPITRE 7 =======================
 \chapter{Conclusion}
 
@@ -582,6 +603,8 @@ installer Java, démarrer Fuseki, créer le jeu de données \texttt{environnemen
 l'ontologie, puis installer les dépendances Python et lancer \texttt{app.py}. Toutes les
 fonctionnalités (recherches, filtres, fiches, carte GeoSPARQL) reposent sur des requêtes SPARQL
 interrogeant l'ontologie en temps réel, garantissant la cohérence entre les données et l'interface.
+L'application est également accessible en ligne via les plateformes Fly.io et Render
+(voir §~6.2), ce qui permet de la tester sans aucune installation locale.
 
 % ======================= ANNEXES =======================
 \appendix
@@ -649,6 +672,8 @@ SELECT ?nom WHERE { ?s a en:CoursDEau ; en:nom ?nom } LIMIT 5
 \hline
 \tete{Élément} & \tete{Adresse} \\
 \hline
+\rowcolor{grisfond} Application en ligne (Fly.io) & \url{https://burkina-environnement.fly.dev} \\
+\rowcolor{grisfond} Application en ligne (Render) & \url{https://burkina-environnement.onrender.com} \\
 \rowcolor{grisfond} Interface de gestion Fuseki & \url{http://localhost:3030} \\
 \rowcolor{grisfond} Endpoint SPARQL & \url{http://localhost:3030/environnement/query} \\
 \rowcolor{grisfond} Application (accueil) & \url{http://127.0.0.1:5000} \\
