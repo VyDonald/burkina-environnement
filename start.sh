@@ -5,6 +5,9 @@ echo "=== Demarrage de l'environnement ==="
 
 # --- 1. Demarrer Fuseki en arriere-plan ---
 echo "[1/4] Demarrage de Apache Jena Fuseki..."
+FUSEKI_BASE="/tmp/fuseki-run"
+mkdir -p "$FUSEKI_BASE/configuration"
+export FUSEKI_BASE
 /opt/fuseki/fuseki-server --port=3030 &
 
 # Attendre que Fuseki soit pret
