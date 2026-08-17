@@ -1,6 +1,8 @@
 """Logique métier partagée : statistiques, recherche globale, carte spatiale."""
 
-from .sparql import NS, PREFIX, UOM_KM, accent_regex, run, short_name, _uri
+import math
+
+from .sparql import NS, PREFIX, accent_regex, run, short_name, _uri
 
 TYPES_COURS_EAU = "(?t = en:Fleuve || ?t = en:Riviere || ?t = en:Marigot)"
 
@@ -142,19 +144,37 @@ GROUP BY ?l ?nom ?lat ?lon
 """)]
 
 
+def _haversine_km(lat1, lon1, lat2, lon2):
+    """Distance en km entre deux points GPS (Haversine)."""
+    R = 6371.0
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    a = (math.sin(dlat / 2) ** 2
+         + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2))
+         * math.sin(dlon / 2) ** 2)
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
 def localites_rayon(lat, lon, rayon_km):
     """Localités à moins de rayon_km d'un point, avec les espèces animales."""
-    localites = run(f"""
+    all_localites = run(f"""
 {PREFIX}
 SELECT ?l ?nom ?lat ?lon
-       (geof:greatCircleDistance(?lat, ?lon, {float(lat):f}, {float(lon):f}, {UOM_KM}) AS ?dist)
 WHERE {{
   ?l a en:Localite ; en:nomLocalite ?nom ; en:latitude ?lat ; en:longitude ?lon .
   {_filtre_burkina("?l")}
-  FILTER(geof:greatCircleDistance(?lat, ?lon, {float(lat):f}, {float(lon):f}, {UOM_KM}) <= {float(rayon_km):f})
 }}
-ORDER BY ?dist
 """)
+    localites = []
+    for l in all_localites:
+        try:
+            d = _haversine_km(float(lat), float(lon), float(l["lat"]), float(l["lon"]))
+        except (ValueError, KeyError):
+            continue
+        if d <= float(rayon_km):
+            l["dist"] = str(round(d, 2))
+            localites.append(l)
+    localites.sort(key=lambda x: float(x["dist"]))
     resultat = []
     for l in localites:
         especes = run(f"""

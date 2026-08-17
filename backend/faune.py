@@ -1,7 +1,7 @@
 """Logique métier : FAUNE (espèces animales)."""
 
 from .commun import _filtre_burkina, localite_hors_burkina
-from .sparql import PREFIX, NS, UOM_KM, accent_regex, run, short_name, _uri
+from .sparql import PREFIX, NS, accent_regex, run, short_name, _uri
 
 
 def recherche_especes(q=None, groupe=None, famille=None, milieu=None,

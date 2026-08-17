@@ -1,7 +1,7 @@
 """Logique métier : HABITATS (localités) — contexte administratif, faune, flore, cours d'eau."""
 
-from .commun import _filtre_burkina, localite_hors_burkina
-from .sparql import PREFIX, UOM_KM, run, short_name, _uri
+from .commun import _filtre_burkina, _haversine_km, localite_hors_burkina
+from .sparql import PREFIX, run, short_name, _uri
 
 
 def liste_habitats():
@@ -33,30 +33,38 @@ ORDER BY ?nom
 
 
 def _contexte_administratif(lat, lon):
-    """Commune la plus proche (GeoSPARQL) puis chaîne Commune > Province > Région."""
+    """Commune la plus proche (Haversine) puis chaîne Commune > Province > Région."""
     if not lat or not lon:
         return None
     rows = run(f"""
 {PREFIX}
-SELECT ?c ?nomC ?dist ?prov ?nomP ?reg ?nomR WHERE {{
+SELECT ?c ?nomC ?latC ?lonC ?prov ?nomP ?reg ?nomR WHERE {{
   ?c a en:Commune ; en:nomLocalite ?nomC ; en:latitude ?latC ; en:longitude ?lonC .
-  BIND(geof:greatCircleDistance({lat}, {lon}, ?latC, ?lonC, {UOM_KM}) AS ?dist)
   OPTIONAL {{ ?c en:estSitueeDans ?prov . ?prov a en:Province ; en:nomLocalite ?nomP .
              OPTIONAL {{ ?prov en:estSitueeDans ?reg . ?reg a en:Region ; en:nomLocalite ?nomR }} }}
 }}
-ORDER BY ?dist
-LIMIT 1
 """)
     if not rows:
         return None
-    r = rows[0]
+    best = None
+    best_dist = float("inf")
+    for r in rows:
+        try:
+            d = _haversine_km(float(lat), float(lon), float(r["latC"]), float(r["lonC"]))
+        except (ValueError, KeyError):
+            continue
+        if d < best_dist:
+            best_dist = d
+            best = r
+    if not best:
+        return None
     return {
-        "commune": {"uri": r["c"], "id": short_name(r["c"]), "nom": r["nomC"]},
-        "province": {"id": short_name(r["prov"]), "nom": r.get("nomP")}
-                    if r.get("prov") else None,
-        "region": {"id": short_name(r["reg"]), "nom": r.get("nomR")}
-                  if r.get("reg") else None,
-        "distanceKm": round(float(r["dist"]), 1),
+        "commune": {"uri": best["c"], "id": short_name(best["c"]), "nom": best["nomC"]},
+        "province": {"id": short_name(best["prov"]), "nom": best.get("nomP")}
+                    if best.get("prov") else None,
+        "region": {"id": short_name(best["reg"]), "nom": best.get("nomR")}
+                  if best.get("reg") else None,
+        "distanceKm": round(best_dist, 1),
     }
 
 
