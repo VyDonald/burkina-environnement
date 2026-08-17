@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.31)  13 AUG 2026 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.31)  17 AUG 2026 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,8 +567,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip88
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 45.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 80
+Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 81
 .
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
@@ -584,25 +584,25 @@ Package babel Info: 'french' activates 'french' shorthands.
 )
 \openout1 = `Manuel_Utilisation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Info: Redefining \degres on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Info: Redefining \degres on input line 81.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -668,62 +668,62 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 80.
+Package hyperref Info: Link coloring ON on input line 81.
  (Manuel_Utilisation.out) (Manuel_Utilisation.out)
 \@outlinefile=\write3
 \openout3 = `Manuel_Utilisation.out'.
 
-<images/ujkz.png, id=147, 417.56pt x 417.56pt>
+<images/ujkz.png, id=151, 417.56pt x 417.56pt>
 File: images/ujkz.png Graphic file (type png)
 <use images/ujkz.png>
-Package pdftex.def Info: images/ujkz.png  used on input line 86.
+Package pdftex.def Info: images/ujkz.png  used on input line 87.
 (pdftex.def)             Requested size: 73.97733pt x 73.97246pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-2.
+3.
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-2.
+3.
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-92.
+93.
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-92.
+93.
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 92.
+(Font)              <17.28> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 92.
+(Font)              <12> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 92.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+(Font)              <10> on input line 93.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
 
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
 
 
 (C:\Users\dkomtoubre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 108.
+(Font)              <8> on input line 109.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 108.
+(Font)              <6> on input line 109.
 
 [1
 
@@ -758,57 +758,56 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 133.
+(Font)              using `T1/lmr/bx/n' instead on input line 134.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \chapter
+l.162 \chapter
               {Introduction} [1
 
 ]
 Chapitre 1.
-<images/01_accueil.png, id=255, 1445.4pt x 1003.75pt>
+<images/01_accueil.png, id=260, 1284.8pt x 1202.4925pt>
 File: images/01_accueil.png Graphic file (type png)
 <use images/01_accueil.png>
-Package pdftex.def Info: images/01_accueil.png  used on input line 184.
-(pdftex.def)             Requested size: 373.3035pt x 259.23814pt.
+Package pdftex.def Info: images/01_accueil.png  used on input line 185.
+(pdftex.def)             Requested size: 373.3035pt x 349.39279pt.
+[2
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--202
-[]|[][]$\T1/lmtt/m/n/12 ontologie _ environnement .
- []
-
-
+ <./images/01_accueil.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 203--203
 []|[][]$\T1/lmtt/m/n/12 ontologie _ environnement .
  []
 
-[2
 
- <./images/01_accueil.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+[]|[][]$\T1/lmtt/m/n/12 ontologie _ environnement .
+ []
+
 Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 220.
- [3]
+(babel)             Reported on input line 221.
+[3]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\T1/lmtt/m/n/12 Java \T1/lmr/m/n/12 (Open-JDK /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 []|\T1/lmr/m/n/12 Triplestore
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 []|\T1/lmr/m/n/12 Exécuter l'ap-pli-ca-tion
  []
 
 
-Overfull \hbox (9.43155pt too wide) in paragraph at lines 257--261
+Overfull \hbox (9.43155pt too wide) in paragraph at lines 258--262
 \T1/lmr/m/n/12 sur le Bu-reau). Vé-ri-fier la pré-sence de \T1/lmtt/m/n/12 app.
 py\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 requirements.txt \T1/lmr/m/n/12 et des fi-ch
 iers [][]$\T1/lmtt/m/n/12 ontologie _
@@ -828,109 +827,124 @@ Chapitre 4.
 Chapitre 5.
 File: images/01_accueil.png Graphic file (type png)
 <use images/01_accueil.png>
-Package pdftex.def Info: images/01_accueil.png  used on input line 411.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/02_recherche.png, id=346, 1445.4pt x 1003.75pt>
-File: images/02_recherche.png Graphic file (type png)
-<use images/02_recherche.png>
-Package pdftex.def Info: images/02_recherche.png  used on input line 427.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
+Package pdftex.def Info: images/01_accueil.png  used on input line 412.
+(pdftex.def)             Requested size: 455.24411pt x 426.07132pt.
 [8
 
 ]
-<images/03_faune.png, id=351, 1445.4pt x 1003.75pt>
+<images/02_recherche.png, id=355, 1284.8pt x 1202.4925pt>
+File: images/02_recherche.png Graphic file (type png)
+<use images/02_recherche.png>
+Package pdftex.def Info: images/02_recherche.png  used on input line 428.
+(pdftex.def)             Requested size: 455.24411pt x 426.07132pt.
+ [9 <./images/02_recherche.png (PNG copy)>]
+<images/03_faune.png, id=363, 1284.8pt x 2167.09625pt>
 File: images/03_faune.png Graphic file (type png)
 <use images/03_faune.png>
-Package pdftex.def Info: images/03_faune.png  used on input line 446.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/05_flore.png, id=352, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/03_faune.png  used on input line 447.
+(pdftex.def)             Requested size: 455.24411pt x 767.85307pt.
+
+
+LaTeX Warning: Float too large for page by 99.06999pt on input line 450.
+
+<images/05_flore.png, id=364, 1284.8pt x 2283.53125pt>
 File: images/05_flore.png Graphic file (type png)
 <use images/05_flore.png>
-Package pdftex.def Info: images/05_flore.png  used on input line 453.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/04_fiche_faune.png, id=353, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/05_flore.png  used on input line 454.
+(pdftex.def)             Requested size: 455.24411pt x 809.10873pt.
+
+LaTeX Warning: Float too large for page by 140.32565pt on input line 457.
+
+<images/04_fiche_faune.png, id=365, 1284.8pt x 824.07875pt>
 File: images/04_fiche_faune.png Graphic file (type png)
 <use images/04_fiche_faune.png>
-Package pdftex.def Info: images/04_fiche_faune.png  used on input line 468.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/06_fiche_flore.png, id=354, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/04_fiche_faune.png  used on input line 469.
+(pdftex.def)             Requested size: 455.24411pt x 291.99043pt.
+<images/06_fiche_flore.png, id=366, 1284.8pt x 803.0pt>
 File: images/06_fiche_flore.png Graphic file (type png)
 <use images/06_fiche_flore.png>
-Package pdftex.def Info: images/06_fiche_flore.png  used on input line 480.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
+Package pdftex.def Info: images/06_fiche_flore.png  used on input line 481.
+(pdftex.def)             Requested size: 455.24411pt x 284.52174pt.
 
-Overfull \hbox (7.27669pt too wide) in paragraph at lines 488--492
+Overfull \hbox (7.27669pt too wide) in paragraph at lines 489--493
 \T1/lmr/m/n/12 peut re-cher-cher et fil-trer par type (Fleuve, Ri-vière, Ma-ri-
 got). La fiche (\T1/lmtt/m/n/12 /cours-deau/<nom>\T1/lmr/m/n/12 )
  []
 
-[9 <./images/02_recherche.png (PNG copy)>]
-<images/07_cours_deau.png, id=363, 1445.4pt x 1003.75pt>
+<images/07_cours_deau.png, id=367, 1284.8pt x 2145.01375pt>
 File: images/07_cours_deau.png Graphic file (type png)
 <use images/07_cours_deau.png>
-Package pdftex.def Info: images/07_cours_deau.png  used on input line 495.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/08_fiche_cours_deau.png, id=364, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/07_cours_deau.png  used on input line 496.
+(pdftex.def)             Requested size: 455.24411pt x 760.02873pt.
+
+LaTeX Warning: Float too large for page by 91.24565pt on input line 499.
+
+<images/08_fiche_cours_deau.png, id=368, 1284.8pt x 1109.14375pt>
 File: images/08_fiche_cours_deau.png Graphic file (type png)
 <use images/08_fiche_cours_deau.png>
-Package pdftex.def Info: images/08_fiche_cours_deau.png  used on input line 502
+Package pdftex.def Info: images/08_fiche_cours_deau.png  used on input line 503
 .
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/09_habitats.png, id=365, 1445.4pt x 1003.75pt>
+(pdftex.def)             Requested size: 455.24411pt x 392.99567pt.
+<images/09_habitats.png, id=369, 1284.8pt x 3832.3175pt>
 File: images/09_habitats.png Graphic file (type png)
 <use images/09_habitats.png>
-Package pdftex.def Info: images/09_habitats.png  used on input line 515.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/10_fiche_habitat.png, id=366, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/09_habitats.png  used on input line 516.
+(pdftex.def)             Requested size: 455.24411pt x 1357.88007pt.
+
+LaTeX Warning: Float too large for page by 689.09698pt on input line 519.
+
+<images/10_fiche_habitat.png, id=370, 1284.8pt x 1653.17625pt>
 File: images/10_fiche_habitat.png Graphic file (type png)
 <use images/10_fiche_habitat.png>
-Package pdftex.def Info: images/10_fiche_habitat.png  used on input line 522.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/11_carte.png, id=367, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/10_fiche_habitat.png  used on input line 523.
+(pdftex.def)             Requested size: 455.24411pt x 585.75916pt.
+<images/11_carte.png, id=371, 1284.8pt x 1107.13625pt>
 File: images/11_carte.png Graphic file (type png)
 <use images/11_carte.png>
-Package pdftex.def Info: images/11_carte.png  used on input line 536.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
-<images/12_menacees.png, id=368, 1445.4pt x 1003.75pt>
+Package pdftex.def Info: images/11_carte.png  used on input line 537.
+(pdftex.def)             Requested size: 455.24411pt x 392.28436pt.
+<images/12_menacees.png, id=372, 1284.8pt x 1908.12875pt>
 File: images/12_menacees.png Graphic file (type png)
 <use images/12_menacees.png>
-Package pdftex.def Info: images/12_menacees.png  used on input line 548.
-(pdftex.def)             Requested size: 455.24411pt x 316.13698pt.
- [10 <./images/03_faune.png (PNG copy)>] [11 <./images/05_flore.png (PNG copy)>
-] [12 <./images/04_fiche_faune.png (PNG copy)>] [13 <./images/06_fiche_flore.pn
-g (PNG copy)>] [14 <./images/07_cours_deau.png (PNG copy)>] [15 <./images/08_fi
-che_cours_deau.png (PNG copy)>]
-[16 <./images/09_habitats.png (PNG copy)>] [17 <./images/10_fiche_habitat.png (
-PNG copy)>] [18 <./images/11_carte.png (PNG copy)>] [19 <./images/12_menacees.p
-ng (PNG copy)>]
+Package pdftex.def Info: images/12_menacees.png  used on input line 549.
+(pdftex.def)             Requested size: 455.24411pt x 676.09482pt.
+
+LaTeX Warning: Float too large for page by 7.31174pt on input line 552.
+
+[10] [11 <./images/03_faune.png (PNG copy)>] [12 <./images/05_flore.png (PNG co
+py)>] [13 <./images/04_fiche_faune.png (PNG copy)> <./images/06_fiche_flore.png
+ (PNG copy)>] [14 <./images/07_cours_deau.png (PNG copy)>] [15 <./images/08_fic
+he_cours_deau.png (PNG copy)>] [16 <./images/09_habitats.png (PNG copy)>]
+[17 <./images/10_fiche_habitat.png (PNG copy)>] [18 <./images/11_carte.png (PNG
+ copy)>] [19 <./images/12_menacees.png (PNG copy)>]
 Chapitre 6.
 
-Underfull \hbox (badness 3601) in paragraph at lines 563--563
+Underfull \hbox (badness 3601) in paragraph at lines 564--564
 []|\T1/lmr/m/n/12 Python ab-sent ou hors du
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 563--564
+Underfull \hbox (badness 3482) in paragraph at lines 564--565
 \T1/lmr/m/n/12 chant \T1/lmr/bx/n/12 Add Py-thon to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 \T1/lmr/m/n/12 ri-fier [][]$\T1/lmtt/m/n/12 http : / / localhost :
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 568--568
+Underfull \hbox (badness 1424) in paragraph at lines 569--569
 []|\T1/lmr/m/n/12 Le fi-chier \T1/lmtt/m/n/12 .owx \T1/lmr/m/n/12 n'a pas été
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 []|\T1/lmr/m/n/12 Clic droit sur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 \T1/lmtt/m/n/12 fuseki-server \T1/lmr/m/n/12 puis ^^S
  []
 
@@ -943,9 +957,14 @@ Chapitre 7.
 ]
 Annexe A.
 
-Overfull \hbox (14.05612pt too wide) in paragraph at lines 615--615
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 638--638
 []\T1/lmtt/m/n/12 |   |-- commun.py          # statistiques, recherche globale,
  filtre Burkina[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+[]|[][]$\T1/lmtt/m/n/12 https : / / burkina-[]environnement . onrender .
  []
 
 [22
@@ -960,13 +979,13 @@ L3 programming layer <2025-12-24>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Manuel_Utilisation.out' has not changed.
-(rerunfilecheck)             Checksum: 3EE20EEFEB719E57617DBC28B58DF579;6456.
+(rerunfilecheck)             Checksum: CE80EA00A7A356F5F841863F4A7CDE25;6590.
  ) 
 Here is how much of TeX's memory you used:
- 16687 strings out of 467871
- 270649 string characters out of 5415956
- 770147 words of memory out of 5000000
- 45194 multiletter control sequences out of 15000+600000
+ 16690 strings out of 467871
+ 270688 string characters out of 5415956
+ 771247 words of memory out of 5000000
+ 45196 multiletter control sequences out of 15000+600000
  704312 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,366b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -982,9 +1001,9 @@ MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/dkomtoubre/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/dkomtoubre/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/dkomtoubre/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Manuel_Utilisation.pdf (27 pages, 4594924 bytes).
+Output written on Manuel_Utilisation.pdf (27 pages, 5620608 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 
