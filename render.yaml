@@ -4,6 +4,8 @@ services:
     runtime: docker
     dockerfilePath: ./Dockerfile
     envVars:
+      - key: PORT
+        value: "5000"
       - key: FUSEKI_ENDPOINT
         value: http://localhost:3030/environnement/query
     healthCheckPath: /

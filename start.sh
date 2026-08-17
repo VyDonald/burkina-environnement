@@ -50,9 +50,10 @@ echo "      Triples charges: $COUNT"
 # --- 3. Demarrer Flask ---
 echo "[4/4] Demarrage de l'application Flask..."
 export FUSEKI_ENDPOINT="http://localhost:3030/environnement/query"
+APP_PORT="${PORT:-5000}"
 
 exec gunicorn app:app \
-    --bind 0.0.0.0:5000 \
+    --bind "0.0.0.0:${APP_PORT}" \
     --workers 2 \
     --threads 4 \
     --timeout 120 \
