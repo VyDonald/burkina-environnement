@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block titre %}{{ fiche.nomCourant }} — Flore du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<nav class="fil-ariane"><a href="/flore">Flore</a> › {{ fiche.nomCourant }}</nav>
+
+<section class="fiche-tete">
+  <div class="fiche-photo fiche-photo-vide fiche-photo-vegetale">🌿</div>
+  <div class="fiche-titre">
+    <h1>{{ fiche.nomCourant }} <em class="scientifique">{{ fiche.nomScientifique }}</em></h1>
+    {% if fiche.famille %}<span class="badge-statut badge-categorie">{{ fiche.famille.nom }}</span>{% endif %}
+    {% if fiche.nomsLocaux %}<p class="noms-locaux">Nom(s) local(aux) : {{ fiche.nomsLocaux | join(', ') }}</p>{% endif %}
+    <p>{{ fiche.description or '' }}</p>
+  </div>
+</section>
+
+<section class="fiche-grille">
+  <div class="fiche-colonne">
+    <h2>Classification botanique</h2>
+    <table class="table">
+      {% for taxon in fiche.taxons %}
+      <tr><th>{{ taxon.classe }}</th><td>{{ taxon.nom }}</td></tr>
+      {% endfor %}
+    </table>
+
+    <h2>Caractéristiques</h2>
+    <table class="table">
+      {% if fiche.hauteurMoyenne %}<tr><th>Hauteur moyenne</th><td>{{ fiche.hauteurMoyenne }}</td></tr>{% endif %}
+      {% if fiche.zones %}
+      <tr><th>Zones climatiques</th><td>{{ fiche.zones | join(', ') }}</td></tr>
+      {% endif %}
+      {% if fiche.conditions %}
+      <tr><th>Conditions de culture</th><td>{{ fiche.conditions | join(', ') }}</td></tr>
+      {% endif %}
+    </table>
+
+    <h2>Localités de présence</h2>
+    {% if fiche.localites %}
+    <ul class="liste-puces">
+      {% for l in fiche.localites %}
+      <li><a href="/habitats/{{ l.id }}">{{ l.nom }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucune information.</p>{% endif %}
+
+    {% if fiche.precautions %}
+    <h2>Précautions</h2>
+    <p class="precautions">{{ fiche.precautions }}</p>
+    {% endif %}
+  </div>
+
+  <div class="fiche-colonne">
+    <h2>Usages</h2>
+    {% if fiche.usages %}
+      {% for usage in fiche.usages %}
+      <div class="usage">
+        <h3>{{ usage.label }}</h3>
+        {% if usage.pathologies %}<p><strong>Maladies soignées :</strong> {{ usage.pathologies | join(', ') }}</p>{% endif %}
+        {% if usage.modes %}<p><strong>Modes de préparation :</strong> {{ usage.modes | join(', ') }}</p>{% endif %}
+        {% if usage.parties %}<p><strong>Parties utilisées :</strong> {{ usage.parties | join(', ') }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    {% else %}<p class="vide">Aucun usage répertorié.</p>{% endif %}
+
+    <h2>Source</h2>
+    <p class="source">{{ fiche.source or '—' }}</p>
+  </div>
+</section>
+{% endblock %}

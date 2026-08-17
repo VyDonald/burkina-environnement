@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block titre %}{{ h.nom }} — Habitat du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<nav class="fil-ariane"><a href="/habitats">Habitats</a> › {{ h.nom }}</nav>
+
+<section class="fiche-tete">
+  <div class="fiche-titre">
+    <h1>{{ h.nom }}</h1>
+    {% if h.administratif %}
+    <p class="contexte-admin">
+      <strong>Niveau dans la hiérarchie administrative :</strong>
+      <span class="chemin-admin">
+        {% if h.administratif.region %}<span class="admin-r">Région {{ h.administratif.region.nom }}</span> ›{% endif %}
+        {% if h.administratif.province %}<span class="admin-p">Province {{ h.administratif.province.nom }}</span> ›{% endif %}
+        {% if h.administratif.commune %}<span class="admin-c">Commune {{ h.administratif.commune.nom }}</span>{% endif %}
+      </span>
+      <span class="degrade">(commune la plus proche à {{ h.administratif.distanceKm }} km, calcul GeoSPARQL)</span>
+    </p>
+    {% else %}
+    <p class="degrade">Niveau administratif : non déterminé (pas de coordonnées dans l'ontologie).</p>
+    {% endif %}
+    {% if h.geom %}<p class="degrade">{{ h.geom }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="fiche-grille">
+  <div class="fiche-colonne">
+    <h2>Faune présente <span class="compteur">({{ h.faune | length }})</span></h2>
+    {% if h.faune %}
+    <ul class="liste-habitat">
+      {% for e in h.faune %}
+      <li class="habitat-faune">
+        <a href="/faune/{{ e.id }}">{{ e.nomCommun }}</a>
+        <em>{{ e.nomScientifique }}</em>
+        {% if e.codeStatut %}<span class="badge-statut badge-{{ e.codeStatut }}">{{ e.libelleStatut }} ({{ e.codeStatut }})</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucune espèce animale recensée.</p>{% endif %}
+
+    <h2>Flore présente <span class="compteur">({{ h.flore | length }})</span></h2>
+    {% if h.flore %}
+    <ul class="liste-habitat">
+      {% for p in h.flore %}
+      <li class="habitat-flore">
+        <a href="/flore/{{ p.id }}">{{ p.nomCourant }}</a>
+        <em>{{ p.nomScientifique }}</em>
+        <span class="degrade">{{ p.nomFamille }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucune espèce végétale recensée.</p>{% endif %}
+  </div>
+
+  <div class="fiche-colonne">
+    <h2>Cours d'eau <span class="compteur">({{ h.cours_eau | length }})</span></h2>
+    {% if h.cours_eau %}
+    <ul class="liste-habitat">
+      {% for c in h.cours_eau %}
+      <li class="habitat-eau">
+        <a href="/cours-deau/{{ c.id }}">{{ c.nom }}</a>
+        <span class="degrade">{{ c.type or '—' }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucun cours d'eau traversant cet habitat.</p>{% endif %}
+
+    <h2>Source</h2>
+    <p class="source">Données issues de l'ontologie « burkina-environnement » (classes Localite, EspeceAnimale, EspeceVegetale, CoursEau). La localisation administrative est déduite par distance GeoSPARQL à la commune la plus proche.</p>
+  </div>
+</section>
+{% endblock %}

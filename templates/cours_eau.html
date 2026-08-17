@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block titre %}Cours d'eau — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>Les cours d'eau du Burkina Faso</h1>
+  <p>Fleuves, rivières et marigots du Burkina Faso, rattachés à leurs bassins versants
+     (Comoe, Niger, Volta) avec régime hydrologique et longueur.</p>
+  <form id="form-recherche" class="recherche-barre" role="search">
+    <input type="search" id="q" name="q" placeholder="Rechercher un cours d'eau… (ex. Nakanbé, Mouhoun)" autocomplete="off">
+    <button type="submit" class="btn btn-primaire">Rechercher</button>
+  </form>
+</section>
+
+<section class="filtres" id="filtres">
+  <p class="filtres-titre">Filtres</p>
+  <div class="filtres-grille">
+    <div class="champ">
+      <label for="f-type">Type de cours d'eau</label>
+      <select id="f-type"><option value="">Tous</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-bassin">Bassin versant</label>
+      <select id="f-bassin"><option value="">Tous</option></select>
+    </div>
+  </div>
+  <div class="filtres-actions">
+    <button class="btn btn-secondaire" id="btn-appliquer">Appliquer les filtres</button>
+    <button class="btn" id="btn-reinitialiser" style="background:#eee; color:#555;">Réinitialiser</button>
+  </div>
+</section>
+
+<div class="entete-liste">
+  <h2 id="titre-resultats">Tous les cours d'eau</h2>
+  <span class="compteur" id="compteur"></span>
+</div>
+
+<div id="grille" class="grille-especes">
+  <div class="chargement">Chargement des cours d'eau…</div>
+</div>
+
+<div class="pagination" id="pagination"></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/commun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/hydro.js') }}"></script>
+{% endblock %}

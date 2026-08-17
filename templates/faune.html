@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block titre %}Faune — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>La faune du Burkina Faso</h1>
+  <p>Espèces animales recensées : mammifères, oiseaux, reptiles, amphibiens et poissons.
+     Recherchez, filtrez par classification zoologique, milieu de vie ou statut UICN.</p>
+  <form id="form-recherche" class="recherche-barre" role="search">
+    <input type="search" id="q" name="q" placeholder="Rechercher un nom commun ou scientifique… (ex. Guépard, Panthera)" autocomplete="off">
+    <button type="submit" class="btn btn-primaire">Rechercher</button>
+  </form>
+</section>
+
+<section class="filtres" id="filtres">
+  <p class="filtres-titre">Filtres</p>
+  <div class="filtres-grille">
+    <div class="champ">
+      <label for="f-groupe">Groupe zoologique</label>
+      <select id="f-groupe"><option value="">Tous</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-famille">Famille</label>
+      <select id="f-famille"><option value="">Toutes</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-milieu">Milieu de vie</label>
+      <select id="f-milieu"><option value="">Tous</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-statut">Statut UICN</label>
+      <select id="f-statut"><option value="">Tous</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-localite">Localité d'observation</label>
+      <select id="f-localite"><option value="">Toutes</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-menacees"><input type="checkbox" id="f-menacees" style="transform:scale(1.15); margin-right:.35rem;">Espèces menacées (CR/EN)</label>
+      <div style="height:2.3rem"></div>
+    </div>
+  </div>
+  <div class="filtres-actions">
+    <button class="btn btn-secondaire" id="btn-appliquer">Appliquer les filtres</button>
+    <button class="btn" id="btn-reinitialiser" style="background:#eee; color:#555;">Réinitialiser</button>
+  </div>
+</section>
+
+<div class="entete-liste">
+  <h2 id="titre-resultats">Toutes les espèces animales</h2>
+  <span class="compteur" id="compteur"></span>
+</div>
+
+<div id="grille" class="grille-especes">
+  <div class="chargement">Chargement des espèces…</div>
+</div>
+
+<div class="pagination" id="pagination"></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/commun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/faune.js') }}"></script>
+{% endblock %}

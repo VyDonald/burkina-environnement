@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block titre %}Flore — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>La flore du Burkina Faso</h1>
+  <p>Espèces végétales recensées avec leur classification botanique, leurs usages
+     (alimentaires, médicinaux, artisanaux, ornementaux) et leurs conditions de culture.</p>
+  <form id="form-recherche" class="recherche-barre" role="search">
+    <input type="search" id="q" name="q" placeholder="Rechercher un nom courant ou scientifique… (ex. Karité, Baobab)" autocomplete="off">
+    <button type="submit" class="btn btn-primaire">Rechercher</button>
+  </form>
+</section>
+
+<section class="filtres" id="filtres">
+  <p class="filtres-titre">Filtres</p>
+  <div class="filtres-grille">
+    <div class="champ">
+      <label for="f-famille">Famille botanique</label>
+      <select id="f-famille"><option value="">Toutes</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-usage">Usage</label>
+      <select id="f-usage"><option value="">Tous</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-zone">Zone climatique</label>
+      <select id="f-zone"><option value="">Toutes</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-condition">Condition de culture</label>
+      <select id="f-condition"><option value="">Toutes</option></select>
+    </div>
+    <div class="champ">
+      <label for="f-localite">Localité de présence</label>
+      <select id="f-localite"><option value="">Toutes</option></select>
+    </div>
+  </div>
+  <div class="filtres-actions">
+    <button class="btn btn-secondaire" id="btn-appliquer">Appliquer les filtres</button>
+    <button class="btn" id="btn-reinitialiser" style="background:#eee; color:#555;">Réinitialiser</button>
+  </div>
+</section>
+
+<div class="entete-liste">
+  <h2 id="titre-resultats">Toutes les espèces végétales</h2>
+  <span class="compteur" id="compteur"></span>
+</div>
+
+<div id="grille" class="grille-especes">
+  <div class="chargement">Chargement des espèces…</div>
+</div>
+
+<div class="pagination" id="pagination"></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/commun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/flore.js') }}"></script>
+{% endblock %}

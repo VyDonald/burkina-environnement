@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block titre %}Accueil — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <img src="{{ url_for('static', filename='images/Flag_of_Burkina_Faso_drapeau.gif') }}" alt="" class="bandeau-drapeau" aria-hidden="true">
+  <h1>L'environnement du <span class="accent">Burkina Faso</span></h1>
+  <p>Une plateforme sémantique pour explorer la faune, la flore et le réseau hydrographique du Burkina Faso.
+     Les données proviennent entièrement de l'ontologie « burkina-environnement » interrogeable en SPARQL/GeoSPARQL.</p>
+  <div class="drapeau-barre">
+    <span class="rouge"></span>
+    <span class="jaune"></span>
+    <span class="vert"></span>
+  </div>
+  <div class="recherche-globale">
+    <form id="form-recherche" role="search">
+      <input type="search" id="q-globale" placeholder="Rechercher dans toute l'ontologie (espèces, plantes, cours d'eau)…" autocomplete="off">
+      <button type="submit" class="btn btn-primaire">Rechercher</button>
+    </form>
+    <div id="resultats-globaux" class="resultats-globaux" hidden></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><span class="stat-nb">{{ stats.especesAnimales }}</span><span class="stat-lib">Espèces animales</span></div>
+  <div class="stat"><span class="stat-nb">{{ stats.especesVegetales }}</span><span class="stat-lib">Espèces végétales</span></div>
+  <div class="stat"><span class="stat-nb">{{ stats.coursEau }}</span><span class="stat-lib">Cours d'eau</span></div>
+  <div class="stat danger"><span class="stat-nb">{{ stats.menacees }}</span><span class="stat-lib">Espèces menacées (CR/EN)</span></div>
+  <div class="stat"><span class="stat-nb">{{ stats.localites }}</span><span class="stat-lib">Localités</span></div>
+  <div class="stat"><span class="stat-nb">{{ stats.regions + stats.provinces + stats.communes }}</span><span class="stat-lib">Entités administratives</span></div>
+</section>
+
+<h2 class="titre-sec">Explorer par domaine</h2>
+<section class="domaines">
+  <a href="/faune" class="carte-domaine faune">
+    <span class="emoji">🦁</span>
+    <h3>Faune</h3>
+    <p>{{ stats.especesAnimales }} espèces animales, classification zoologique, statut UICN, milieux de vie, aires protégées.</p>
+    <span class="lien">Explorer la faune →</span>
+  </a>
+  <a href="/flore" class="carte-domaine flore">
+    <span class="emoji">🌿</span>
+    <h3>Flore</h3>
+    <p>{{ stats.especesVegetales }} espèces végétales, usages alimentaires, médicinaux, artisanaux et ornementaux.</p>
+    <span class="lien">Explorer la flore →</span>
+  </a>
+  <a href="/cours-deau" class="carte-domaine hydro">
+    <span class="emoji">💧</span>
+    <h3>Cours d'eau</h3>
+    <p>{{ stats.coursEau }} fleuves, rivières et marigots, bassins versants, affluents et caractéristiques hydrologiques.</p>
+    <span class="lien">Explorer les cours d'eau →</span>
+  </a>
+  <a href="/carte" class="carte-domaine carte">
+    <span class="emoji">🗺️</span>
+    <h3>Carte spatiale</h3>
+    <p>Localités géoréférencées et recherche par rayon à l'aide de fonctions GeoSPARQL.</p>
+    <span class="lien">Ouvrir la carte →</span>
+  </a>
+  <a href="/menacees" class="carte-domaine menaces">
+    <span class="emoji">🚨</span>
+    <h3>Espèces menacées</h3>
+    <p>{{ stats.menacees }} espèces classées en danger critique (CR) ou en danger (EN) par l'UICN.</p>
+    <span class="lien">Voir les espèces menacées →</span>
+  </a>
+</section>
+
+<section class="frise">
+  <h2 class="titre-sec">Contenu de l'ontologie</h2>
+  <div class="stat-brutes">
+    <span class="puce">{{ stats.famillesZoologiques }} familles zoologiques</span>
+    <span class="puce">{{ stats.famillesBotaniques }} familles botaniques</span>
+    <span class="puce">{{ stats.usagesMedicinaux }} usages médicinaux</span>
+    <span class="puce">{{ stats.pathologies }} pathologies soignées</span>
+    <span class="puce">{{ stats.photos }} photographies</span>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/commun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/accueil.js') }}"></script>
+{% endblock %}

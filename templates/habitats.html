@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block titre %}Habitats — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>Les habitats du Burkina Faso</h1>
+  <p>Pour chaque habitat (localité) de l'ontologie : son niveau dans la hiérarchie
+     administrative du Burkina, la faune qui s'y trouve, la flore qui s'y trouve
+     et les cours d'eau qui la traversent.</p>
+</section>
+
+<div class="entete-liste">
+  <h2>{{ habitats | length }} habitat(s) recensé(s)</h2>
+</div>
+
+<div class="grille-especes">
+  {% for h in habitats %}
+  <a href="/habitats/{{ h.id }}" class="carte-espece">
+    <div class="carte-photo carte-photo-habitat">
+      <span>{{ h.nom[0] | upper }}</span>
+    </div>
+    <div class="carte-corps">
+      <h3>{{ h.nom }}</h3>
+      <p class="sc">{{ 'Coordonnées disponibles' if h.lat else 'Habitat descriptif (sans coordonnées)' }}</p>
+      <div class="badges">
+        <span class="badge-milieu">🦁 {{ h.faune }} espèce(s)</span>
+        <span class="badge-usage">🌿 {{ h.flore }} plante(s)</span>
+        <span class="badge-type">💧 {{ h.coursEau }} cours d'eau</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

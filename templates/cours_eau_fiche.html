@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block titre %}{{ fiche.nom }} — Cours d'eau du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<nav class="fil-ariane"><a href="/cours-deau">Cours d'eau</a> › {{ fiche.nom }}</nav>
+
+<section class="fiche-tete">
+  <div class="fiche-photo fiche-photo-vide fiche-photo-eau">💧</div>
+  <div class="fiche-titre">
+    <h1>{{ fiche.nom }} <span class="badge-statut badge-type">{{ fiche.typeLabel }}</span></h1>
+    {% if fiche.appellations %}<p class="noms-locaux">Autres appellations : {{ fiche.appellations | join(', ') }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="fiche-grille">
+  <div class="fiche-colonne">
+    <h2>Hydrologie</h2>
+    <table class="table">
+      <tr><th>Régime</th><td>{{ fiche.regime or '—' }}</td></tr>
+      {% if fiche.longueur %}<tr><th>Longueur</th><td>{{ fiche.longueur }}</td></tr>{% endif %}
+      {% if fiche.bassin %}<tr><th>Bassin versant</th><td>{{ fiche.bassin.nom }}</td></tr>{% endif %}
+      {% if fiche.sous_bassin %}<tr><th>Sous-bassin</th><td>{{ fiche.sous_bassin.nom }}</td></tr>{% endif %}
+      {% if fiche.parent %}<tr><th>Affluent de</th><td><a href="/cours-deau/{{ fiche.parent.id }}">{{ fiche.parent.nom }} ({{ fiche.parent.type }})</a></td></tr>{% endif %}
+    </table>
+
+    {% if fiche.affluents %}
+    <h2>Affluents</h2>
+    <ul class="liste-puces">
+      {% for a in fiche.affluents %}
+      <li><a href="/cours-deau/{{ a.id }}">{{ a.nom }} <span class="degrade">({{ a.type }})</span></a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if fiche.caracteristiques %}
+    <h2>Caractéristiques hydrologiques</h2>
+    {% for c in fiche.caracteristiques %}
+    <div class="usage">
+      {% if c.debitMoyen %}<p><strong>Débit moyen :</strong> {{ c.debitMoyen }} {{ c.uniteMesure or '' }}</p>{% endif %}
+      {% if c.hauteurEau %}<p><strong>Hauteur d'eau :</strong> {{ c.hauteurEau }}</p>{% endif %}
+      {% if c.periodeCrue %}<p><strong>Période de crue :</strong> {{ c.periodeCrue }}</p>{% endif %}
+      {% if c.comment %}<p class="degrade">{{ c.comment }}</p>{% endif %}
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="fiche-colonne">
+    {% if fiche.sources or fiche.versements %}
+    <h2>Parcours</h2>
+    {% if fiche.sources %}
+    <p><strong>Source :</strong> {% for s in fiche.sources %}{{ s.nom }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    {% endif %}
+    {% if fiche.versements %}
+    <p><strong>Versement :</strong> {% for v in fiche.versements %}{{ v.nom }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    {% endif %}
+    {% endif %}
+
+    <h2>Entités traversées</h2>
+    {% if fiche.traverses %}
+    <table class="table">
+      {% for t in fiche.traverses %}
+      <tr><th>{{ t.type }}</th><td>{{ t.nom }}</td></tr>
+      {% endfor %}
+    </table>
+    {% else %}<p class="vide">Aucune information.</p>{% endif %}
+
+    {% if fiche.ethnies %}
+    <h2>Peuples associés</h2>
+    <ul class="liste-puces">
+      {% for e in fiche.ethnies %}<li>{{ e }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    <h2>Source</h2>
+    <p class="source">{{ fiche.source or '—' }}</p>
+  </div>
+</section>
+{% endblock %}

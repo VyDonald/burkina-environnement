@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titre %}Espèces menacées — Environnement du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>Espèces animales menacées</h1>
+  <p>Espèces classées <strong>en danger critique (CR)</strong> ou <strong>en danger (EN)</strong> par l'UICN dans l'ontologie.</p>
+</section>
+
+<div class="entete-liste">
+  <h2>{{ especes | length }} espèce(s) menacée(s)</h2>
+</div>
+
+<div class="grille-especes">
+  {% for e in especes %}
+  <a href="/faune/{{ e.id }}" class="carte-espece">
+    <div class="carte-photo carte-photo-vide">{{ e.nomCommun[0] | upper }}</div>
+    <div class="carte-corps">
+      <h3>{{ e.nomCommun }}</h3>
+      <p class="sc">{{ e.nomScientifique }}</p>
+      <span class="badge-statut badge-{{ e.codeStatut }}">{{ e.libelleStatut }} ({{ e.codeStatut }})</span>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

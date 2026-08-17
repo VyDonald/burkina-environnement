@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: burkina-environnement
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: FUSEKI_ENDPOINT
+        value: http://localhost:3030/environnement/query
+    healthCheckPath: /
+    autoDeploy: true

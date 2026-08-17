@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block titre %}Carte spatiale — Environnement du Burkina Faso{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+{% endblock %}
+
+{% block contenu %}
+<section class="bandeau">
+  <h1>Carte spatiale</h1>
+  <p>Localités d'observation de la faune (nombre d'espèces et d'espèces menacées),
+     présence de la flore, découpage administratif et recherche par rayon grâce aux fonctions GeoSPARQL.</p>
+</section>
+
+<div class="carte-layout">
+  <div class="carte-panneau">
+    <h2>Recherche par rayon</h2>
+    <div class="champ">
+      <label for="c-loc">Centre (localité)</label>
+      <select id="c-loc"><option value="">—</option></select>
+    </div>
+    <div class="champ">
+      <label for="c-rayon">Rayon (km)</label>
+      <input type="number" id="c-rayon" min="10" max="500" step="10" value="100">
+    </div>
+    <button class="btn btn-primaire" id="c-rechercher" style="width:100%">Espèces dans le rayon</button>
+
+    <h2>Couches</h2>
+    <div class="couches">
+      <label><input type="checkbox" id="c-admin-regions" class="c-admin"> Régions</label>
+      <label><input type="checkbox" id="c-admin-provinces" class="c-admin"> Provinces</label>
+      <label><input type="checkbox" id="c-admin-communes" class="c-admin"> Communes</label>
+    </div>
+
+    <h2>Légende</h2>
+    <ul class="legende">
+      <li><span class="leg-pt leg-localite"></span> Localité</li>
+      <li><span class="leg-pt leg-region"></span> Région</li>
+      <li><span class="leg-pt leg-province"></span> Province</li>
+      <li><span class="leg-pt leg-commune"></span> Commune</li>
+    </ul>
+  </div>
+
+  <div id="carte" class="carte-map"></div>
+</div>
+
+<div id="panneau-rayon" class="panneau-rayon" hidden>
+  <div class="panneau-tete">
+    <h3 id="rayon-titre"></h3>
+    <button class="btn" id="rayon-fermer" aria-label="Fermer">✕</button>
+  </div>
+  <div id="rayon-contenu"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/commun.js') }}"></script>
+<script src="{{ url_for('static', filename='js/carte.js') }}"></script>
+{% endblock %}

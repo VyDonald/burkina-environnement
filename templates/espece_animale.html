@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block titre %}{{ fiche.nomCommun }} — Faune du Burkina Faso{% endblock %}
+
+{% block contenu %}
+<nav class="fil-ariane"><a href="/faune">Faune</a> › {{ fiche.nomCommun }}</nav>
+
+<section class="fiche-tete">
+  {% if fiche.medias and fiche.medias[0] %}
+  <div class="fiche-photo"><img src="{{ fiche.medias[0] }}" alt="{{ fiche.nomCommun }}" loading="lazy"></div>
+  {% else %}
+  <div class="fiche-photo fiche-photo-vide">{{ (fiche.nomCommun or '?')[0] | upper }}</div>
+  {% endif %}
+  <div class="fiche-titre">
+    <h1>{{ fiche.nomCommun }} <em class="scientifique">{{ fiche.nomScientifique }}</em></h1>
+    {% if fiche.statuts %}<span class="badge-statut badge-{{ fiche.statuts[0].code }}">{{ fiche.statuts[0].libelle }} ({{ fiche.statuts[0].code }})</span>{% endif %}
+    <p>{{ fiche.description or '' }}</p>
+  </div>
+</section>
+
+<section class="fiche-grille">
+  <div class="fiche-colonne">
+    <h2>Classification zoologique</h2>
+    <table class="table">
+      {% for taxon in fiche.taxons %}
+      <tr><th>{{ taxon.rang }}</th><td>{{ taxon.nom }}</td></tr>
+      {% endfor %}
+    </table>
+
+    {% if fiche.caracteristiques %}
+    <h2>Caractéristiques</h2>
+    <table class="table">
+      {% for lib, val in [('Régime alimentaire', fiche.regimeAlimentaire),
+                          ('Poids moyen', fiche.poidsMoyen),
+                          ('Durée de vie moyenne', fiche.dureeVieMoyenne)] %}
+      {% if val %}<tr><th>{{ lib }}</th><td>{{ val }}</td></tr>{% endif %}
+      {% endfor %}
+    </table>
+    {% endif %}
+  </div>
+
+  <div class="fiche-colonne">
+    <h2>Milieux de vie</h2>
+    {% if fiche.milieux %}
+    <ul class="liste-puces">
+      {% for m in fiche.milieux %}<li>{{ m }}</li>{% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucune information.</p>{% endif %}
+
+    <h2>Zones d'observation</h2>
+    {% if fiche.localites %}
+    <ul class="liste-puces">
+      {% for l in fiche.localites %}
+      <li><a href="/habitats/{{ l.id }}">{{ l.nom }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vide">Aucune information.</p>{% endif %}
+
+    <h2>Source</h2>
+    <p class="source">{{ fiche.source or '—' }}</p>
+  </div>
+</section>
+{% endblock %}
