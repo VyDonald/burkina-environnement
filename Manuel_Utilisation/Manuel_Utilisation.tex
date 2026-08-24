@@ -115,7 +115,7 @@ literate={à}{{\`a}}1 {é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ô}{{\^o}}1 {û}{{
 \vspace{0.1em}
 {\large\bfseries Dr. GUINKO T. Ferdinand}\par
 \vspace{3em}
-{\large Date de soumission : 17/08/2026}\par
+{\large Date de soumission : 24/08/2026}\par
 \vspace{0.2em}
 {\large Année universitaire 2025--2026}\par
 \end{titlepage}
@@ -541,28 +541,32 @@ selon la classification UICN, avec leur statut affiché en badge coloré.
 \section{Accès en ligne}
 
 L'application est également déployée sur le cloud, permettant d'y accéder directement depuis un
-navigateur sans aucune installation locale. Deux plateformes d'hébergement ont été retenues :
+navigateur sans aucune installation locale. L'application est accessible à l'adresse suivante :
 
-\begin{itemize}
-\item \textbf{Fly.io} (recommandé) --- hébergement stable, sans mise en veille, HTTPS automatique.
-      L'application est accessible à l'adresse suivante :
-
-      \url{https://burkina-environnement.fly.dev}
-
-\item \textbf{Render} --- hébergement complémentaire, avec mise en veille au bout d'une
-      inactivité. L'application est accessible à l'adresse suivante :
-
+\begin{center}\large
       \url{https://burkina-environnement.onrender.com}
-\end{itemize}
+\end{center}
 
-\noindent Ces deux instances sont synchronisées avec le dépôt Git du projet : chaque mise à jour
+\noindent Cette instance est synchronisée avec le dépôt Git du projet : chaque mise à jour
 pushée sur la branche \texttt{main} est automatiquement reconstruite et redéployée.
 
-\medskip\noindent\textbf{Remarque :} si la première visite affiche une erreur serveur (page vide ou message
-d'erreur), il suffit de \textbf{rafraîchir la page} (\texttt{F5} ou le bouton Actualiser du
-navigateur). Si le problème persiste après le rafraîchissement, copiez l'adresse URL et
-collez-la dans un \textbf{autre navigateur} ; le serveur de première mise en veille se
-réveille généralement en quelques secondes.
+\medskip\noindent\textbf{Remarque importante --- mise en veille du plan gratuit.} Sur l'hébergement
+gratuit de Render, l'application se met automatiquement en veille après environ
+\textbf{15 minutes d'inactivité}. Lors du premier accès suivant une période de veille, le serveur
+se réveille puis recharge l'ontologie (environ \textbf{1 minute}) ; pendant cette phase de
+démarrage, le navigateur peut afficher une page vide ou un message d'erreur serveur. Dans ce cas :
+
+\begin{itemize}
+\item \textbf{attendre environ une minute}, puis \textbf{rafraîchir la page} (\texttt{F5} ou le
+      bouton Actualiser du navigateur) ;
+\item si le problème persiste, copiez l'adresse URL et collez-la dans un \textbf{autre
+      navigateur} ;
+\item après ce premier réveil, toutes les pages répondent normalement tant que l'activité
+      se maintient.
+\end{itemize}
+
+\noindent Ce comportement est propre à l'hébergement gratuit et n'affecte en rien les
+fonctionnalités de l'application ni les données qu'elle sert.
 
 % ======================= CHAPITRE 7 =======================
 \chapter{Conclusion}
@@ -574,7 +578,7 @@ installer Java, démarrer Fuseki, créer le jeu de données \texttt{environnemen
 l'ontologie, puis installer les dépendances Python et lancer \texttt{app.py}. Toutes les
 fonctionnalités (recherches, filtres, fiches, carte GeoSPARQL) reposent sur des requêtes SPARQL
 interrogeant l'ontologie en temps réel, garantissant la cohérence entre les données et l'interface.
-L'application est également accessible en ligne via les plateformes Fly.io et Render
+L'application est également accessible en ligne via la plateforme Render
 (voir §~6.2), ce qui permet de la tester sans aucune installation locale.
 
 % ======================= ANNEXES =======================
@@ -643,7 +647,6 @@ SELECT ?nom WHERE { ?s a en:CoursDEau ; en:nom ?nom } LIMIT 5
 \hline
 \tete{Élément} & \tete{Adresse} \\
 \hline
-\rowcolor{grisfond} Application en ligne (Fly.io) & \url{https://burkina-environnement.fly.dev} \\
 \rowcolor{grisfond} Application en ligne (Render) & \url{https://burkina-environnement.onrender.com} \\
 \rowcolor{grisfond} Interface de gestion Fuseki & \url{http://localhost:3030} \\
 \rowcolor{grisfond} Endpoint SPARQL & \url{http://localhost:3030/environnement/query} \\
