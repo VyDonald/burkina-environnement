@@ -273,8 +273,7 @@
     <owl:ObjectProperty rdf:about="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonFils">
         <owl:inverseOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Taxon"/>
-        <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Taxon"/>
-        <rdfs:comment xml:lang="fr">Taxon(s) fils direct(s).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Taxon(s) fils direct(s). Range non contraint volontairement : via inverseOf(aPourTaxonParent), un range Taxon retyperait les especes comme Taxon et violerait la disjonction EspeceAnimale/EspeceVegetale vs Taxon des que les sous-proprietes de rattachement sont utilisees.</rdfs:comment>
         <rdfs:label xml:lang="fr">aPourTaxonFils</rdfs:label>
     </owl:ObjectProperty>
     
@@ -284,9 +283,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Taxon"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Taxon"/>
-        <rdfs:comment xml:lang="fr">Lien d&apos;un taxon vers son taxon parent, tous domaines du vivant ; les rattachements de rang (flore, faune) en sont des sous-proprietes. Cardinalite : 0..1.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Lien d&apos;un taxon vers son taxon parent, tous domaines du vivant ; les rattachements de rang (flore, faune) en sont des sous-proprietes. Domaine non contraint volontairement : le typage Taxon des especes par inference de domaine contredirait la disjonction entre Taxon et les classes d&apos;especes. Cardinalite : 0..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">aPourTaxonParent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -389,7 +387,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Ordre"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#ClasseBotanique"/>
-        <rdfs:comment xml:lang="fr">Classe botanique parente. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Classe botanique parente (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientAClasseBotanique</rdfs:label>
     </owl:ObjectProperty>
     
@@ -401,7 +400,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#ClasseBotanique"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Embranchement"/>
-        <rdfs:comment xml:lang="fr">Embranchement parent. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Embranchement parent (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientAEmbranchement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -414,7 +414,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#EspeceVegetale"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#FamilleBotanique"/>
-        <rdfs:comment xml:lang="fr">Famille botanique de l&apos;espece. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Famille botanique de l&apos;espece (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientAFamilleBotanique</rdfs:label>
     </owl:ObjectProperty>
     
@@ -427,7 +428,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#EspeceAnimale"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#FamilleZoologique"/>
-        <rdfs:comment xml:lang="fr">Famille zoologique de l&apos;espece. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Famille zoologique de l&apos;espece (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientAFamilleZoologique</rdfs:label>
     </owl:ObjectProperty>
     
@@ -439,7 +441,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#FamilleBotanique"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Ordre"/>
-        <rdfs:comment xml:lang="fr">Ordre parent. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Ordre parent (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientAOrdre</rdfs:label>
     </owl:ObjectProperty>
     
@@ -451,7 +454,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Embranchement"/>
         <rdfs:range rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#Regne"/>
-        <rdfs:comment xml:lang="fr">Regne parent. Cardinalite : 1..1.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#aPourTaxonParent"/>
+        <rdfs:comment xml:lang="fr">Regne parent (sous-propriete de aPourTaxonParent). Cardinalite : 1..1.</rdfs:comment>
         <rdfs:label xml:lang="fr">appartientARegne</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1248,8 +1252,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#nomLocal">
         <rdfs:domain rdf:resource="http://www.ibam-ujkz.bf/ontologies/burkina-environnement#EspeceVegetale"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="fr">Nom(s) en langue nationale avec balise de langue (ex. &quot;taanga&quot;@mos).</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+        <rdfs:comment xml:lang="fr">Nom(s) en langue nationale avec balise de langue obligatoire (ex. &quot;taanga&quot;@mos). Range rdf:langString : toutes les valeurs sont taguees (mos, dyu, fuf, hau), un range xsd:string rendait l&apos;ontologie incoherente pour HermiT.</rdfs:comment>
         <rdfs:label xml:lang="fr">nomLocal</rdfs:label>
     </owl:DatatypeProperty>
     

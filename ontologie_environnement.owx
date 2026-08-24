@@ -48433,6 +48433,30 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#aPourTaxonParent"/>
     </TransitiveObjectProperty>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientARegne"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientAEmbranchement"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientAFamilleZoologique"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientAOrdre"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientAClasseBotanique"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#appartientAFamilleBotanique"/>
+        <ObjectProperty IRI="#aPourTaxonParent"/>
+    </SubObjectPropertyOf>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#affluentDe"/>
     </TransitiveObjectProperty>
@@ -48491,10 +48515,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aPourTaxonFils"/>
-        <Class IRI="#Taxon"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#aPourTaxonParent"/>
         <Class IRI="#Taxon"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -48727,10 +48747,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aPourSousBassin"/>
         <Class IRI="#SousBassin"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#aPourTaxonFils"/>
-        <Class IRI="#Taxon"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aPourTaxonParent"/>
@@ -49400,7 +49416,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nomLocal"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nomLocalite"/>
@@ -58213,7 +58229,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#nomLocal</IRI>
-        <Literal xml:lang="fr">Nom(s) en langue nationale avec balise de langue (ex. &quot;taanga&quot;@mos).</Literal>
+        <Literal xml:lang="fr">Nom(s) en langue nationale avec balise de langue obligatoire (ex. &quot;taanga&quot;@mos). Range rdf:langString : toutes les valeurs sont taguees (mos, dyu, fuf, hau), un range xsd:string rendait l&apos;ontologie incoherente pour HermiT.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
